@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li ><a  href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+    </nav>
+
+    
+
+    <section class="home">
+        <div class="home-info">
+            <h1>MADHANAGOPAL S</h1>
+            <h2>I'm a Devops Engineer</h2>
+            <p>Passionate about automating processes, streamlining deployments,and enhancing infrastructure reliability.</p>
+            <div class="btn-sci">
+                <a href="assests/pdf/Madhanagopal_S.pdf" class="btn" target="_blank">Download CV</a>
+                <div class="sci">
+                    <a href="https://github.com/madhanagopal-s" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="www.linkedin.com/in/madhanagopal-s-528a61171" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+                    <a href="mailto:gopalms2001@gmail.com" target="_blank"><i class='bx bx-envelope' ></i></a>
+                    <a href="https://www.instagram.com/__hitman__45__?igsh=OThja2EzejkzOHlo&utm_source=qr" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-items">
+                    <img src="assests/img/dp2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+        <div class="journey">
+            <h3><i class='bx bx-briefcase'></i> Career Journey</h3>
+            <p>Started as a DevOps Engineer, working on CI/CD pipelines, infrastructure automation, and cloud deployments. Evolved into a full-stack developer, building web applications with modern frameworks.</p>
+            <ul>
+                <li><i class='bx bx-right-arrow'></i> DevOps Engineer at RNTBCI</br> (2022 - Present)</li>
+            </ul>
+        </div>
+
+        <div class="education">
+            <h3><i class='bx bx-book'></i> Educational Journey</h3>
+            <p>Pursued a Bachelor's degree in Electronics and Communication, where I discovered my passion for coding, problem-solving, and building scalable systems.</p>
+            <ul>
+                <li><i class='bx bx-right-arrow'></i> B.E in Electronics and Communication, Sethu Institute of Technology</br>(2018 - 2022)</li>
+                <li><i class='bx bx-right-arrow'></i> High School, PKN Hr.Sec.School</br> (2016 - 2018)</li>
+            </ul>
+        </div>
+
+        <div class="hobbies">
+            <h3><i class='bx bx-heart'></i> Hobbies & Interests</h3>
+            <p>When I'm not coding, I enjoy creative activities and staying active!</p>
+            <ul>
+                <li><i class='bx bx-pencil'></i> Drawing and sketching portraits</li>
+                <li><i class='bx bx-football'></i> Playing football , cricket and badminton</li>
+                <li><i class='bx bx-movie'></i> Watching sci-fi and thriller movies</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2 >Skills</h2>
+    <div class="skills-grid" id="skillsGrid"></div>
+</section>
+
+<section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container" id="projectContainer"></div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Feel free to reach out for more info or just a friendly hello !</p>
+        
+        <div class="contact-content" >
+            <form class="contact-form" id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="user_name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="user_email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="user_message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <div class="contact-info">
+                <p><i class='bx bx-envelope'></i> gopalms2001@gmail.com</p>
+                <p><i class='bx bx-phone'></i> 6379471497</p>
+                <p><i class='bx bx-map'></i> Madurai,Tamilnadu,India</p>
+                <div class="sci">
+                    <a href="https://github.com/madhanagopal-s" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="www.linkedin.com/in/madhanagopal-s-528a61171" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/__hitman__45__?igsh=OThja2EzejkzOHlo&utm_source=qr" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+</body>
+</html>
+
+<script src="js/skills.js"></script>
+<script src="js/project.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/about.js"></script>
+<script src="js/navbar.js"></script>

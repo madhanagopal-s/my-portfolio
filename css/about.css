@@ -1,0 +1,120 @@
+.about {
+    padding: 60px 9%;
+    color: #1f242d;
+    background: #fff;
+}
+
+.about h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.about-container p, .about-container ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-container ul li {
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-container ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #7cf03d;
+}
+
+/* Initially hide the cards */
+.about-container div {
+    padding: 20px;
+    border: 2px solid #7cf03d;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(124, 240, 61, 0.5);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation Keyframes */
+@keyframes slide-left1 {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add these classes dynamically with JavaScript */
+.journey.show {
+    animation: slide-left1 1s ease-out forwards;
+}
+
+.education.show {
+    animation: slide-up 1s ease-out forwards;
+}
+
+.hobbies.show {
+    animation: slide-right 1s ease-out forwards;
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For Mobile Devices (1 Column) */
+@media (max-width: 600px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about-container div {
+        padding: 15px;
+    }
+
+    .about-container p, 
+    .about-container ul {
+        font-size: 14px;
+    }
+}

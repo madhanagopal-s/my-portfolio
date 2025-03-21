@@ -1,0 +1,77 @@
+/* General Styles */
+.skills {
+    padding: 50px 9%;
+    background: #fff;
+    color: #1f242d;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Skill Card Default State */
+.skill-item {
+    background: #27313f;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Move slightly downward */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Skill Icons */
+.skill-item i {
+    font-size: 40px;
+    color: #7cf03d;
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.skill-item p {
+    font-size: 16px;
+}
+
+/* Floating Animations */
+@keyframes floatLeft {
+    0% { transform: translateX(-50px); opacity: 0; }
+    50% { transform: translateX(10px); opacity: 1; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes floatRight {
+    0% { transform: translateX(50px); opacity: 0; }
+    50% { transform: translateX(-10px); opacity: 1; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Apply animation when revealed */
+.skill-item.reveal:nth-child(odd) {
+    animation: floatLeft 1s ease-out forwards;
+}
+
+.skill-item.reveal:nth-child(even) {
+    animation: floatRight 1s ease-out forwards;
+}
