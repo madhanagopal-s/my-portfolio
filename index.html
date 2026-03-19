@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -89,13 +90,35 @@
 </section>
 
 <section id="skills" class="skills">
-    <h2 >Skills</h2>
-    <div class="skills-grid" id="skillsGrid"></div>
+    <h2 class="section-title">Skills</h2>
+    <div class="carousel-wrapper">
+        <button class="carousel-btn prev-btn" id="skillsPrev" aria-label="Previous skills">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <div class="carousel-container" id="skillsCarousel">
+            <div class="carousel-track" id="skillsTrack"></div>
+        </div>
+        <button class="carousel-btn next-btn" id="skillsNext" aria-label="Next skills">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+    </div>
+    <div class="carousel-dots" id="skillsDots"></div>
 </section>
 
 <section id="projects" class="projects">
     <h2 class="section-title">Projects</h2>
-    <div class="project-container" id="projectContainer"></div>
+    <div class="carousel-wrapper">
+        <button class="carousel-btn prev-btn" id="projectsPrev" aria-label="Previous projects">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <div class="carousel-container" id="projectsCarousel">
+            <div class="carousel-track" id="projectsTrack"></div>
+        </div>
+        <button class="carousel-btn next-btn" id="projectsNext" aria-label="Next projects">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+    </div>
+    <div class="carousel-dots" id="projectsDots"></div>
 </section>
 
 <section class="contact" id="contact">

@@ -1,100 +1,102 @@
 .about {
-    padding: 60px 9%;
-    color: #1f242d;
-    background: #fff;
+    padding: 100px 6%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+    position: relative;
 }
 
 .about h2 {
-    font-size: 36px;
+    font-size: 48px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
 }
 
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
 }
 
 .about-container p, .about-container ul {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #cbd5e1;
 }
 
 .about-container ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 14px 0;
     display: flex;
     align-items: center;
 }
 
 .about-container ul li i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #7cf03d;
+    font-size: 18px;
+    margin-right: 12px;
+    color: #60a5fa;
 }
 
-/* Initially hide the cards */
+.about-container h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Cards Styling - Glassmorphism */
 .about-container div {
-    padding: 20px;
-    border: 2px solid #7cf03d;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(124, 240, 61, 0.5);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    padding: 40px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    background: rgba(99, 102, 241, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+.about-container div:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 16px 48px rgba(99, 102, 241, 0.15);
+    transform: translateY(-8px);
+    background: rgba(99, 102, 241, 0.1);
 }
 
 /* Animation Keyframes */
-@keyframes slide-left1 {
+@keyframes fadeInUp {
     from {
-        transform: translateX(-100vw);
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: translateX(0);
         opacity: 1;
-    }
-}
-
-@keyframes slide-up {
-    from {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-    to {
         transform: translateY(0);
-        opacity: 1;
     }
 }
 
-@keyframes slide-right {
-    from {
-        transform: translateX(100vw);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Add these classes dynamically with JavaScript */
-.journey.show {
-    animation: slide-left1 1s ease-out forwards;
-}
-
-.education.show {
-    animation: slide-up 1s ease-out forwards;
-}
-
+.journey.show,
+.education.show,
 .hobbies.show {
-    animation: slide-right 1s ease-out forwards;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 @media (max-width: 992px) {
     .about-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .about h2 {
+        font-size: 32px;
     }
 }
 

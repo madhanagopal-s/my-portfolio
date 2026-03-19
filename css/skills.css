@@ -1,77 +1,41 @@
-/* General Styles */
+/* Skills Section - Carousel */
 .skills {
-    padding: 50px 9%;
-    background: #fff;
-    color: #1f242d;
+    width: 100%;
+    padding: 80px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
 }
 
-.skills h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.skills .section-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    display: inline-block;
+    width: 100%;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+@media (max-width: 768px) {
+    .skills {
+        padding: 60px 15px;
+    }
+    
+    .skills .section-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
 }
 
-/* Skill Card Default State */
-.skill-item {
-    background: #27313f;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Move slightly downward */
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-/* Hover Effect */
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Skill Icons */
-.skill-item i {
-    font-size: 40px;
-    color: #7cf03d;
-    margin-bottom: 10px;
-}
-
-.skill-item h3 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-.skill-item p {
-    font-size: 16px;
-}
-
-/* Floating Animations */
-@keyframes floatLeft {
-    0% { transform: translateX(-50px); opacity: 0; }
-    50% { transform: translateX(10px); opacity: 1; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes floatRight {
-    0% { transform: translateX(50px); opacity: 0; }
-    50% { transform: translateX(-10px); opacity: 1; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-/* Apply animation when revealed */
-.skill-item.reveal:nth-child(odd) {
-    animation: floatLeft 1s ease-out forwards;
-}
-
-.skill-item.reveal:nth-child(even) {
-    animation: floatRight 1s ease-out forwards;
+@media (max-width: 480px) {
+    .skills {
+        padding: 40px 12px;
+    }
+    
+    .skills .section-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
 }
